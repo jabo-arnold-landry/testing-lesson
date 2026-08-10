@@ -1,0 +1,36 @@
+{
+  "name": "express-test-lesson",
+  "version": "1.0.0",
+  "description": "This will be the ultimate testing with vitest in express",
+  "keywords": [
+    "vitest",
+    "express",
+    "test",
+    "typescript"
+  ],
+  "license": "ISC",
+  "author": "jabo arnold landry",
+  "type": "commonjs",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec ts-node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.2.0",
+    "eslint": "^10.8.1",
+    "express": "^5.2.1",
+    "install": "^0.13.0",
+    "nodemon": "^3.1.14",
+    "pnpm": "^11.20.0",
+    "prettier": "^3.9.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "mongoose": "^9.9.1"
+  }
+}
