@@ -1,5 +1,7 @@
 import Contacts from "../schema/contactList";
 import { Request, Response } from "express";
+import validateEmail from "../utils/email-validation";
+
 async function addContacts(req: Request, res: Response) {
   try {
     const { contactName, phoneNumber, email } = req.body;
