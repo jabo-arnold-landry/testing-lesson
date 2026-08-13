@@ -1,6 +1,6 @@
-import Contacts from "../schema/contactList";
+import Contacts from "../../schema/contactList";
 import { Request, Response } from "express";
-import validateEmail from "../utils/email-validation";
+import validateEmail from "../../utils/email-validation";
 
 async function addContacts(req: Request, res: Response) {
   try {
