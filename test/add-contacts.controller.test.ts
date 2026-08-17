@@ -4,6 +4,10 @@ import Contacts from "../schema/contactList";
 import addContacts from "../src/controllers/add-contacts.controller";
 import { type Response, type Request } from "express";
 
+vi.mock("../utils/email-validation", () => {
+  return { default: vi.fn().mockReturnValue(true) };
+});
+import validateEmail from "../utils/email-validation";
 const fakeContact = {
   contactName: "arnold",
   phoneNumber: 798600102,
@@ -33,6 +37,10 @@ describe("Add contacts to the database", async () => {
     const req = {
       body: { ...fakeContact, email: "fakemail" },
     } as Request;
+
+    (validateEmail as ReturnType<typeof vi.fn>).mockImplementation(() => {
+      throw new Error("invalid email!");
+    });
 
     const res = {
       status: vi.fn().mockReturnThis(),
