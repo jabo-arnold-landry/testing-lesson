@@ -20,7 +20,7 @@ bun install # for bun
 For this project I used mongo for database you will need to create your database and use the connection string that your database instance uses
 
 ```bash
-cp .env.example .env # run this command to get the same connection string as the project uses
+cp .env.example .env # run this command to get the same env structure as the project uses
 ```
 after cloning and installing the packages you will be good to start running the project.
 
