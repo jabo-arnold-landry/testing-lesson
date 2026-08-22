@@ -1,6 +1,6 @@
 # Description
 
-This Repo demonstrates unit and integration tests demo that explains the use case for both types of tests and how tcan write both of the tests for your application APIs and functions.
+This Repo demonstrates unit and integration tests demo that explains the use case for both types of tests and how you can write both of the tests for your application APIs and functions.
 
 # Project setup
 
@@ -14,6 +14,14 @@ pnpm install # for pnpm
 npm install # for npm
 yarn install # for yarn
 bun install # for bun
+```
+### Start server
+run the below command to start the server
+```bash
+pnpm run dev # for pnpm 
+npm run dev # for npm
+yarn run dev # for yarn
+bun run dev # for bun
 ```
 ## create your database connection string inside .env
 
