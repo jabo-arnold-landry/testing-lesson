@@ -23,7 +23,17 @@ npm run dev # for npm
 yarn run dev # for yarn
 bun run dev # for bun
 ```
-## create your database connection string inside .env
+---
+### run tests
+run the below command to run tests
+```bash
+pnpm run test # for pnpm 
+npm run test # for npm
+yarn run test # for yarn
+bun run test # for bun
+```
+
+## Create your database connection string inside .env
 
 For this project I used mongo for database you will need to create your database and use the connection string that your database instance uses
 
