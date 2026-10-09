@@ -1,0 +1,27 @@
+name: ci
+on:
+  push:
+    branches:
+    - main
+    - api-tests-and-mock
+    - email-test
+    - integration-test
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 24
+        cache: npm
+    - name: install dependencies
+      run: npm ci
+    - name: build the project
+      run: npm run build
+    - name: run tests
+      run: npm run test
