@@ -1,0 +1,32 @@
+name: ci
+on:
+  push:
+    branches:
+    - main
+    - api-tests-and-mock
+    - email-test
+    - integration-test
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: pnpm/action-setup@v4
+      with:
+        version: 11
+
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 24
+        cache: pnpm
+    - name: install dependencies
+      run: pnpm install --frozen-lockfile
+    - name: build the project
+      run: pnpm run build
+    - name: run tests
+      run: pnpm run test
